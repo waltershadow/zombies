@@ -33,6 +33,13 @@ export default class Zombie {
       this.zombie.position.y + v.y
     );
   }
+  kill() {
+    this.app.stage.removeChild(this.zombie);
+  }
+
+  get position() {
+    return this.zombie.position;
+  }
 
   randomSpawnPoint() {
     let edge = Math.floor(Math.random() * 4);
